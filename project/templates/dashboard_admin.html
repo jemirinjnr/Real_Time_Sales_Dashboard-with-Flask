@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+
+    <!-- Category Filter -->
+    <form method="get" style="margin-bottom: 10px;">
+        <label for="category">Category:</label>
+        <select name="category" id="category" onchange="this.form.submit()">
+            <option value="">All</option>
+            {% for cat in categories %}
+                <option value="{{ cat }}" {% if cat == selected_category %}selected{% endif %}>{{ cat }}</option>
+            {% endfor %}
+        </select>
+    </form>
+
+    <!-- Table and Pagination -->
+    <div id="table-container">
+        <table border="1">
+            <thead>
+                <tr>
+                    {% for col in columns %}
+                        <th>{{ col|title }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody id="product-table">
+                {% include "table_admin.html" %}
+            </tbody>
+        </table>
+
+        <!-- Pagination Controls -->
+        <div style="margin-top: 10px;" id="pagination-controls">
+            Page {{ page }}
+            {% set cleaned_category = selected_category | replace("&", "%26") | replace(" ", "%20") %}
+            {% if page > 1 %}
+                <a href="/dashboard/admin?page={{ page - 1 }}{% if selected_category %}&category={{ cleaned_category }}{% endif %}" style="margin-left: 10px;">Previous</a>
+            {% endif %}
+            {% if (page * per_page) < total %}
+                <a href="/dashboard/admin?page={{ page + 1 }}{% if selected_category %}&category={{ cleaned_category }}{% endif %}" style="margin-left: 10px;">Next</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <h2>Sales Chart</h2>
+    <img id="sales-chart" src="/plot/sales" style="width:100%; display:block;">
+    <br>
+    <a href="/download/inventory" download>
+        <button>Download Current Inventory & Sales (CSV)</button>
+    </a>
+    <br><br>
+    <button onclick="exitDashboard()">Exit</button>
+
+    <script>
+        function exitDashboard() {
+            const confirmExit = confirm("Are you sure you want to exit?");
+            if (confirmExit) {
+                window.location.href = "/";
+            }
+        }
+    </script>
+    <script>
+        const socket = io();
+
+        socket.on('update', () => {
+            const params = new URLSearchParams(window.location.search);
+            const page = params.get('page') || 1;
+            const category = params.get('category') || '';
+            fetch(`/dashboard/admin/table?page=${page}&category=${encodeURIComponent(category)}`)
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('product-table').innerHTML = html;
+                });
+
+            // Optionally refresh chart
+            document.getElementById('sales-chart').src = '/plot/sales?' + new Date().getTime();
+        });
+    </script>
+    <script>
+        function restock(name) {
+            const quantity = prompt("Enter restock quantity for " + name + ":");
+            if (!quantity || isNaN(quantity) || parseInt(quantity) <= 0) {
+                alert("Invalid quantity.");
+                return;
+            }
+
+            fetch('/restock', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ product_name: name, quantity: parseInt(quantity) })
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.json();
+            })
+            .then(data => {
+                if (!data.success) {
+                    alert(data.error || 'Restock failed');
+                } else {
+                    alert("Restocked successfully!");
+                }
+            })
+            .catch(err => alert('Network error: ' + err.message));
+        }
+    </script>
+</body>
+</html>

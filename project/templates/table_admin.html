@@ -1,0 +1,20 @@
+{% if products %}
+    {% for product in products %}
+    <tr>
+        {% for col in columns %}
+            <td>
+                {% if col == 'name' %}
+                    {{ product[col]|title }}
+                {% else %}
+                    {{ product[col] }}
+                {% endif %}
+            </td>
+        {% endfor %}
+        <td>
+            <button onclick='restock("{{ product["name"] }}")'>Restock</button>
+        </td>
+    </tr>
+    {% endfor %}
+{% else %}
+    <tr><td colspan="{{ columns|length }}">No products found for this category.</td></tr>
+{% endif %}
