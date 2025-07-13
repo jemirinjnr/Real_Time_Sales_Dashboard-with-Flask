@@ -1,0 +1,146 @@
+/* Global Styles */
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Headings */
+h1, h2, label {
+    color: #f0f6fc;
+}
+
+/* Dropdown Filter */
+form select {
+    background-color: #161b22;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+/* Table Container */
+#table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #161b22;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+th, td {
+    border: 1px solid #30363d;
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: #21262d;
+}
+
+tbody tr:hover {
+    background-color: #2d333b;
+}
+
+/* Buttons */
+button {
+    background-color: #238636;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+#search-button {
+    background-color: #238636;
+    color: #ffffff;
+    border: none;
+    padding: 0px 0px 0px 0px;
+    border-radius: 0px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    height: 20px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+button:hover {
+    background-color: #2ea043;
+    transform: scale(1.05);
+}
+#search-container{
+    background-color: #161b22;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    display: inline-block;
+    height: 20px;
+    border-radius: 6px;
+    position: relative;
+    top: 1px;
+}
+#search{
+border: none;
+    background-color: transparent;
+    color:#161b22;
+    min-width: 150px;
+    border-radius: 6px 0 0 6px;
+    color: #c9d1d9;
+    position: relative;
+    top: -4px;
+}
+#search:focus {
+    outline: none;
+    background-color: #161b22;
+    color: #c9d1d9;
+}
+button:disabled {
+    background-color: #6a737d;
+    cursor: not-allowed;
+}
+
+/* Pagination Links */
+#pagination-controls a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#pagination-controls a:hover {
+    text-decoration: underline;
+}
+
+/* Chart Image */
+#sales-chart {
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    border-radius: 6px;
+}
+
+/* Exit Button */
+button[onclick*="exitDashboard"] {
+    background-color: #da3633;
+}
+
+button[onclick*="exitDashboard"]:hover {
+    background-color: #f85149;
+}
+
+/* Download Button */
+a button {
+    background-color: #8250df;
+}
+
+a button:hover {
+    background-color: #a371f7;
+}

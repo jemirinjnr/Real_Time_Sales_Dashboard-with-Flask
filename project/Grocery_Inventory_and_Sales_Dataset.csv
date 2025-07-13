@@ -4,7 +4,7 @@ Product_ID,Product_Name,category,Supplier_ID,Supplier_Name,Stock_Quantity,Reorde
 06-955-3428,Black Rice,Grains & Pulses,54-031-2945,Vinder,27,38,83,6.0,8/3/2024,6/10/2024,9/22/2024,3296 Walton Court,35,34,Backordered,black rice
 71-594-6552,Long Grain Rice,Grains & Pulses,63-492-7603,Brightbean,10,59,62,1.5,12/8/2024,2/19/2025,4/17/2024,3 Westerfield Crossing,97,99,Active,long grain rice
 57-437-1828,Plum,Fruits & Vegetables,54-226-4308,Topicstorm,36,30,74,4.0,7/3/2024,10/11/2024,10/5/2024,15068 Scoville Court,63,25,Backordered,plum
-21-120-6238,All-Purpose Flour,Grains & Pulses,86-292-4587,Dabjam,37,33,14,1.75,12/3/2024,5/26/2024,9/5/2024,050 Mcbride Avenue,55,62,Discontinued,allpurpose flour
+21-120-6238,All-Purpose Flour,Grains & Pulses,86-292-4587,Dabjam,24,33,14,1.75,12/3/2024,5/26/2024,9/5/2024,050 Mcbride Avenue,78,62,Discontinued,allpurpose flour
 71-516-1996,Corn Oil,Oils & Fats,04-391-7610,Tagfeed,95,52,16,2.5,3/18/2024,5/7/2024,6/20/2024,12 Truax Court,68,13,Active,corn oil
 39-629-5554,Egg (Goose),Dairy,67-679-4930,Muxo,43,90,17,2.5,2/3/2025,4/9/2024,2/5/2025,267 International Plaza,22,91,Discontinued,egg goose
 66-268-8345,Greek Yogurt,Dairy,32-182-1895,Thoughtstorm,89,84,11,3.0,12/4/2024,6/2/2024,1/8/2025,550 Clemons Plaza,58,90,Active,greek yogurt
@@ -22,7 +22,7 @@ Product_ID,Product_Name,category,Supplier_ID,Supplier_Name,Stock_Quantity,Reorde
 25-349-7974,Spinach,Fruits & Vegetables,82-737-6019,Devshare,72,70,99,2.5,10/7/2024,5/28/2024,6/22/2024,42 Bunker Hill Junction,82,32,Discontinued,spinach
 66-627-9752,Trout,Seafood,87-839-6400,Jabbertype,49,73,48,12.0,8/17/2024,10/1/2024,9/3/2024,08 Randy Junction,52,62,Active,trout
 78-614-4402,Green Beans,Fruits & Vegetables,51-014-4287,Gigazoom,81,99,28,2.0,9/30/2024,2/14/2025,4/25/2024,37 Browning Trail,20,85,Discontinued,green beans
-67-025-1245,Cabbage,Fruits & Vegetables,28-575-0716,Chatterbridge,88,46,55,1.0,4/9/2024,3/6/2024,8/12/2024,51890 Lindbergh Terrace,73,63,Active,cabbage
+67-025-1245,Cabbage,Fruits & Vegetables,28-575-0716,Chatterbridge,84,46,55,1.0,4/9/2024,3/6/2024,8/12/2024,51890 Lindbergh Terrace,77,63,Active,cabbage
 68-418-6724,Parmesan Cheese,Dairy,75-465-6257,Feedspan,63,4,85,12.0,12/21/2024,1/13/2025,9/30/2024,49869 Bunker Hill Terrace,59,71,Active,parmesan cheese
 40-795-0753,Raw Sugar,Grains & Pulses,47-183-4911,Mydo,31,43,80,1.5,5/28/2024,2/22/2025,5/30/2024,66879 Susan Place,46,78,Backordered,raw sugar
 02-508-3777,Egg (Quail),Dairy,69-933-2582,Realpoint,97,88,81,0.8,11/5/2024,7/7/2024,6/26/2024,895 Northland Hill,97,18,Discontinued,egg quail
@@ -103,7 +103,7 @@ Product_ID,Product_Name,category,Supplier_ID,Supplier_Name,Stock_Quantity,Reorde
 67-710-5120,Bread Flour,Grains & Pulses,00-131-9278,Skynoodle,84,92,18,1.5,10/29/2024,12/29/2024,2/25/2024,978 Shasta Lane,92,69,Active,bread flour
 49-891-4927,Cottage Cheese,Dairy,89-155-3471,Midel,40,5,1,5.0,1/2/2025,2/26/2024,11/28/2024,46 Hoffman Trail,68,99,Active,cottage cheese
 55-522-8242,Whipped Cream,Dairy,48-884-5431,Feedbug,29,36,40,4.0,11/8/2024,3/30/2024,9/7/2024,7 Spohn Avenue,60,96,Backordered,whipped cream
-62-509-0666,Almond Flour,Grains & Pulses,16-419-1419,Brainverse,13,88,7,9.5,7/28/2024,5/15/2024,7/3/2024,1468 Meadow Vale Court,26,21,Backordered,almond flour
+62-509-0666,Almond Flour,Grains & Pulses,16-419-1419,Brainverse,10,88,7,9.5,7/28/2024,5/15/2024,7/3/2024,1468 Meadow Vale Court,29,21,Backordered,almond flour
 64-478-4745,Lemon,Fruits & Vegetables,36-780-8625,Mydo,63,81,94,2.5,6/4/2024,4/20/2024,11/19/2024,208 Miller Court,56,2,Active,lemon
 35-835-5591,Tilapia,Seafood,54-876-4296,Fiveclub,95,63,73,7.0,11/17/2024,6/5/2024,3/8/2024,509 Carpenter Trail,61,38,Backordered,tilapia
 26-690-3784,Lettuce,Fruits & Vegetables,70-463-6597,Fadeo,58,5,1,2.0,10/2/2024,10/14/2024,4/6/2024,19069 Cordelia Drive,53,80,Active,lettuce
@@ -177,7 +177,7 @@ Product_ID,Product_Name,category,Supplier_ID,Supplier_Name,Stock_Quantity,Reorde
 46-931-6897,Cream,Dairy,22-946-8052,Meevee,29,32,26,2.5,9/21/2024,6/15/2024,9/15/2024,44 Kensington Road,64,85,Discontinued,cream
 58-182-6781,Oatmeal Biscuit,Bakery,75-328-1709,Pixope,34,55,22,5.0,10/11/2024,6/29/2024,11/15/2024,86 Maryland Junction,77,85,Active,oatmeal biscuit
 06-706-6490,Green Tea,Beverages,85-670-6379,Tanoodle,15,66,85,8.0,10/18/2024,7/3/2024,3/15/2024,443 Browning Terrace,60,40,Backordered,green tea
-47-578-4161,Anchovies,Seafood,96-001-5429,Jaxspan,87,56,81,10.0,5/10/2024,3/10/2024,9/14/2024,5 Forest Run Way,100,86,Discontinued,anchovies
+47-578-4161,Anchovies,Seafood,96-001-5429,Jaxspan,86,56,81,10.0,5/10/2024,3/10/2024,9/14/2024,5 Forest Run Way,101,86,Discontinued,anchovies
 18-199-5799,Cheddar Cheese,Dairy,76-870-2139,Jayo,40,81,40,9.0,10/9/2024,4/28/2024,10/30/2024,87784 Blaine Way,40,48,Backordered,cheddar cheese
 00-357-2313,Avocado Oil,Oils & Fats,93-619-6639,Quamba,15,86,23,10.0,6/29/2024,11/26/2024,12/13/2024,0 Oxford Crossing,24,52,Backordered,avocado oil
 83-704-6367,Arabica Coffee,Beverages,41-628-8713,Feedmix,21,87,12,21.0,11/17/2024,9/2/2024,9/7/2024,298 Corry Plaza,20,38,Discontinued,arabica coffee
@@ -282,7 +282,7 @@ Product_ID,Product_Name,category,Supplier_ID,Supplier_Name,Stock_Quantity,Reorde
 56-668-5370,Vegetable Oil,Oils & Fats,13-526-1392,Vimbo,70,96,21,2.0,11/26/2024,9/10/2024,8/3/2024,05686 Golden Leaf Point,100,15,Discontinued,vegetable oil
 29-756-7042,Digestive Biscuit,Bakery,20-426-2191,Dabvine,90,52,50,4.0,6/29/2024,4/15/2024,5/7/2024,99 Fair Oaks Circle,63,14,Discontinued,digestive biscuit
 41-538-3129,Digestive Biscuit,Bakery,91-589-9007,Devshare,77,79,65,4.0,9/1/2024,3/17/2024,7/31/2024,2 Carioca Crossing,62,75,Backordered,digestive biscuit
-16-380-0753,Apricot,Fruits & Vegetables,24-603-5521,Quinu,37,22,71,5.0,10/7/2024,5/16/2024,5/8/2024,701 Logan Court,34,62,Active,apricot
+16-380-0753,Apricot,Fruits & Vegetables,24-603-5521,Quinu,29,22,71,5.0,10/7/2024,5/16/2024,5/8/2024,701 Logan Court,42,62,Active,apricot
 26-535-4727,Tilapia,Seafood,17-939-1338,Jamia,93,25,23,7.0,6/21/2024,8/17/2024,4/29/2024,4 Darwin Circle,72,83,Backordered,tilapia
 59-857-6577,Evaporated Milk,Dairy,57-569-7172,Blognation,23,100,77,2.0,5/10/2024,8/10/2024,3/4/2024,230 Tony Court,63,26,Discontinued,evaporated milk
 14-550-2152,Green Tea,Beverages,60-003-2919,Livepath,51,1,61,7.6,3/29/2024,6/18/2024,11/17/2024,3 Forster Point,96,26,Active,green tea
@@ -295,7 +295,7 @@ Product_ID,Product_Name,category,Supplier_ID,Supplier_Name,Stock_Quantity,Reorde
 08-940-8578,Onion,Fruits & Vegetables,37-686-1726,Oba,34,29,65,2.0,5/3/2024,10/4/2024,11/22/2024,74 Menomonie Point,90,23,Discontinued,onion
 94-020-6982,Tuna,Seafood,72-649-3163,Thoughtstorm,25,75,27,18.0,1/2/2025,10/5/2024,5/4/2024,381 Rutledge Place,31,36,Active,tuna
 42-879-9478,Anchovies,Seafood,00-900-0119,Zoonder,82,22,20,10.0,6/1/2024,2/23/2025,8/22/2024,86 Porter Junction,95,77,Discontinued,anchovies
-00-405-7428,Apple,Fruits & Vegetables,42-746-2717,Zava,80,74,45,3.5,1/20/2025,1/27/2025,1/12/2025,42 Mallory Court,43,23,Discontinued,apple
+00-405-7428,Apple,Fruits & Vegetables,42-746-2717,Zava,79,74,45,3.5,1/20/2025,1/27/2025,1/12/2025,42 Mallory Court,44,23,Discontinued,apple
 87-997-0228,Watermelon,Fruits & Vegetables,55-156-6528,Topicblab,71,4,37,3.0,9/15/2024,10/24/2024,12/27/2024,26240 Maple Wood Place,81,25,Discontinued,watermelon
 05-498-7751,Cauliflower,Fruits & Vegetables,17-963-6051,Abata,52,22,37,2.5,10/28/2024,7/10/2024,3/24/2024,30408 5th Way,56,44,Active,cauliflower
 55-631-7937,Greek Yogurt,Dairy,79-508-5241,Avamba,26,54,90,3.0,10/15/2024,6/19/2024,1/21/2025,82 Drewry Junction,25,81,Active,greek yogurt
@@ -523,7 +523,7 @@ Product_ID,Product_Name,category,Supplier_ID,Supplier_Name,Stock_Quantity,Reorde
 79-428-8753,Cabbage,Fruits & Vegetables,29-521-7910,Skivee,62,79,95,1.0,5/16/2024,7/6/2024,12/30/2024,9 Holmberg Circle,34,12,Active,cabbage
 10-626-8536,Coconut Sugar,Grains & Pulses,23-274-3305,Lazz,17,85,74,5.0,5/1/2024,1/29/2025,3/30/2024,38583 2nd Pass,76,89,Active,coconut sugar
 27-216-9671,Sesame Oil,Oils & Fats,40-773-7065,Skilith,100,86,94,6.5,8/11/2024,4/12/2024,6/4/2024,4 Browning Terrace,77,57,Active,sesame oil
-14-489-8669,All-Purpose Flour,Grains & Pulses,28-436-5158,Wikibox,57,69,68,1.75,7/24/2024,11/5/2024,5/13/2024,21629 Burrows Pass,77,56,Discontinued,allpurpose flour
+14-489-8669,All-Purpose Flour,Grains & Pulses,28-436-5158,Wikibox,65,69,68,1.75,7/24/2024,11/5/2024,5/13/2024,21629 Burrows Pass,77,56,Discontinued,allpurpose flour
 46-632-8420,Whipped Cream,Dairy,27-996-8883,Skippad,98,24,4,4.1,3/8/2024,12/21/2024,5/23/2024,9 Meadow Ridge Center,89,80,Active,whipped cream
 39-192-3521,Herbal Tea,Beverages,74-062-7176,Dynazzy,20,9,12,30.5,6/26/2024,2/22/2025,3/16/2024,428 Oriole Avenue,46,32,Discontinued,herbal tea
 94-528-8088,Haddock,Seafood,68-885-5553,Zoovu,43,7,63,9.0,9/26/2024,7/24/2024,3/8/2024,21379 Stoughton Junction,66,71,Active,haddock
@@ -684,7 +684,7 @@ Product_ID,Product_Name,category,Supplier_ID,Supplier_Name,Stock_Quantity,Reorde
 56-657-4387,White Bread,Bakery,78-629-7560,Meevee,61,77,45,2.5,3/21/2024,2/29/2024,6/22/2024,5 Lyons Street,51,48,Backordered,white bread
 05-720-8792,Carrot,Fruits & Vegetables,33-265-4588,Linkbridge,80,91,36,1.5,3/24/2024,7/8/2024,10/26/2024,2 Northview Avenue,81,74,Active,carrot
 84-151-2114,Brown Rice,Grains & Pulses,79-704-1471,Avamm,39,57,54,2.5,12/6/2024,3/6/2024,8/11/2024,12 Rigney Street,77,32,Active,brown rice
-10-378-9729,Cabbage,nan,83-941-9620,Rooxo,69,21,68,66.55,12/23/2024,11/26/2024,9/21/2024,2 Butterfield Pass,36,35,Discontinued,cabbage
+10-378-9729,Cabbage,Fruits & Vegetables,83-941-9620,Rooxo,69,21,68,66.55,12/23/2024,11/26/2024,9/21/2024,2 Butterfield Pass,36,35,Discontinued,cabbage
 53-930-2215,Egg (Goose),Dairy,42-210-6541,Gabvine,60,43,32,2.5,7/5/2024,10/4/2024,7/9/2024,292 Utah Street,77,60,Active,egg goose
 02-034-6209,Sour Cream,Dairy,34-724-1913,Yodel,22,43,3,4.1,2/1/2025,7/26/2024,10/8/2024,96 Brown Drive,45,87,Backordered,sour cream
 28-003-8065,Almond Flour,Grains & Pulses,42-579-7177,Voonte,80,47,51,9.5,7/19/2024,2/16/2025,1/28/2025,65 Merry Circle,83,69,Discontinued,almond flour
@@ -816,7 +816,7 @@ Product_ID,Product_Name,category,Supplier_ID,Supplier_Name,Stock_Quantity,Reorde
 10-555-5971,Sourdough Bread,Bakery,30-410-3509,Gigashots,94,56,80,4.0,1/4/2025,12/2/2024,9/27/2024,8425 New Castle Parkway,47,96,Backordered,sourdough bread
 82-931-7126,Asparagus,Fruits & Vegetables,67-596-1997,Vitz,34,95,18,5.0,10/14/2024,10/17/2024,5/12/2024,856 School Plaza,41,26,Discontinued,asparagus
 24-228-6840,Herbal Tea,Beverages,26-280-5472,Myworks,27,1,3,30.0,4/16/2024,8/9/2024,11/28/2024,68241 Hanson Circle,34,63,Backordered,herbal tea
-52-392-5312,All-Purpose Flour,Grains & Pulses,78-092-4768,Pixonyx,53,42,20,1.75,11/6/2024,2/19/2025,7/24/2024,336 Old Shore Lane,87,59,Active,allpurpose flour
+52-392-5312,All-Purpose Flour,Grains & Pulses,78-092-4768,Pixonyx,56,42,20,1.75,11/6/2024,2/19/2025,7/24/2024,336 Old Shore Lane,87,59,Active,allpurpose flour
 36-531-4087,Almond Flour,Grains & Pulses,83-172-5527,Skaboo,86,12,94,9.5,3/24/2024,10/25/2024,3/14/2024,2 Columbus Drive,26,32,Discontinued,almond flour
 39-810-2042,Rice Flour,Grains & Pulses,65-620-9866,Quatz,24,2,49,2.0,6/2/2024,1/25/2025,9/5/2024,47817 Oneill Park,98,82,Active,rice flour
 55-164-7723,Halibut,Seafood,85-454-9252,Gevee,82,31,86,20.0,4/10/2024,5/17/2024,1/8/2025,6410 Northwestern Pass,66,74,Active,halibut

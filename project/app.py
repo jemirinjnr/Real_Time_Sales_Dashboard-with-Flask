@@ -68,18 +68,23 @@ def index():
 def dashboard(role):
     if role not in ["admin", "customer"]:
         return "Invalid role.", 404
-
     page = int(request.args.get('page', 1))
     per_page = 10
     raw_category = request.args.get('category', '').strip()
     category = re.sub(r'[^a-zA-Z& ]+', '', raw_category)
+    search_query = request.args.get('search', '').strip().lower()
 
-    df = load_products()
+    full_df = load_products()
+    categories = full_df['category'].unique().tolist() if 'category' in full_df.columns else []
+
+    df = full_df.copy()
 
     if category and 'category' in df.columns:
         df = df[df['category'].astype(str).str.strip().str.lower() == category.lower()]
 
-    categories = df['category'].unique().tolist() if 'category' in df.columns else []
+    if search_query:
+        df = df[df['name'].astype(str).str.lower().str.contains(search_query)]
+
     total = len(df)
     start = (page - 1) * per_page
     end = start + per_page
@@ -96,19 +101,28 @@ def dashboard(role):
         total=total,
         per_page=per_page,
         categories=categories,
-        selected_category=category
+        selected_category=category,
+        search_query=search_query
     )
 
 @app.route('/dashboard/admin/table')
 def dashboard_admin_table():
     page = int(request.args.get('page', 1))
     per_page = 10
+
     raw_category = request.args.get('category', '').strip()
     category = re.sub(r'[^a-zA-Z& ]+', '', raw_category)
+    search_query = request.args.get('search', '').strip().lower()
 
     df = load_products()
+
+    # Filter by category
     if category and 'category' in df.columns:
         df = df[df['category'].astype(str).str.strip().str.lower() == category.lower()]
+
+    # Filter by search
+    if search_query:
+        df = df[df['name'].astype(str).str.lower().str.contains(search_query)]
 
     total = len(df)
     start = (page - 1) * per_page
@@ -128,16 +142,25 @@ def dashboard_admin_table():
         selected_category=category
     )
 
+
 @app.route('/dashboard/customer/table')
 def dashboard_customer_table():
     page = int(request.args.get('page', 1))
     per_page = 10
+
     raw_category = request.args.get('category', '').strip()
     category = re.sub(r'[^a-zA-Z& ]+', '', raw_category)
+    search_query = request.args.get('search', '').strip().lower()
 
     df = load_products()
+
+    # Filter by category
     if category and 'category' in df.columns:
         df = df[df['category'].astype(str).str.strip().str.lower() == category.lower()]
+
+    # Filter by search
+    if search_query:
+        df = df[df['name'].astype(str).str.lower().str.contains(search_query)]
 
     total = len(df)
     start = (page - 1) * per_page
@@ -220,16 +243,33 @@ def handle_connect():
 def plot_sales():
     df = load_products()
     try:
-        fig, ax = plt.subplots(figsize=(20, 6))
-        ax.bar(df['name'][:10], df['sold'][:10], color='skyblue')
-        ax.set_ylabel('Units Sold', fontsize=18)
-        ax.set_xlabel('Product Name', fontsize=18)
-        ax.set_title('Sales per Product (Top 10)', fontsize=22)
-        ax.tick_params(axis='x', labelrotation=30, labelsize=14)
-        ax.tick_params(axis='y', labelsize=14)
-        buf = io.BytesIO()
+        fig, ax = plt.subplots(figsize=(20, 6), facecolor='#202a39')
+        ax.set_facecolor("#202a39")  # Chart background
+
+        bars = ax.bar(df['name'][:10], df['sold'][:10], color='#2ea043')  # GitHub green
+
+        # Set title and labels
+        ax.set_title('Sales per Product (Top 10)', fontsize=22, color='#c9d1d9')
+        ax.set_ylabel('Units Sold', fontsize=18, color='#c9d1d9')
+        ax.set_xlabel('Product Name', fontsize=18, color='#c9d1d9')
+
+        # Ticks styling
+        ax.tick_params(axis='x', labelrotation=30, labelsize=14, colors='#c9d1d9')
+        ax.tick_params(axis='y', labelsize=14, colors='#c9d1d9')
+
+        # Axis lines
+        ax.spines['bottom'].set_color('#c9d1d9')
+        ax.spines['left'].set_color('#c9d1d9')
+        ax.spines['top'].set_color('#0d1117')
+        ax.spines['right'].set_color('#0d1117')
+
+        # Grid styling
+        ax.grid(True, color='#30363d', linestyle='--', linewidth=0.5, alpha=0.3)
+
+        # Tight layout & export
         plt.tight_layout()
-        plt.savefig(buf, format='png')
+        buf = io.BytesIO()
+        plt.savefig(buf, format='png', facecolor=fig.get_facecolor())  # Match background
         plt.close(fig)
         buf.seek(0)
         return send_file(buf, mimetype='image/png')
